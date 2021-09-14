@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int a,b,c;
+    double a,b,c;
     cin >> a >> b >> c;
 
     if(a == 0){
@@ -22,7 +22,7 @@ int main(){
             cout << sqrt(-c/a);
     }
     else if(c==0){
-        cout << min(0, -b/a) << " " << max(0, -b/a);
+        cout << (-b/a > 0 ? 0 : -b/a) << " " << (-b/a < 0 ? 0 : -b/a);
     }
     else{
         double d = b*b-4*c*a;
